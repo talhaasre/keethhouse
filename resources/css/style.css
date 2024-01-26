@@ -1,0 +1,145 @@
+.keeth-sec1 .keeth-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.keeth-sec1 .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.keeth-sec1 .img-wrapper {
+  overflow: hidden;
+}
+
+.keeth-sec1 .img-wrapper .banner-img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-bottom-left-radius: 50%;
+}
+
+.keeth-sec1 .header_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5em 0 0;
+}
+
+.keeth-sec1 .header_wrapper .logo {
+  width: 100%;
+  max-width: 15em;
+  margin: 0 auto;
+}
+
+.keeth-sec1 .header_wrapper .navbar-list {
+  width: 100%;
+  display: flex;
+  padding: 2.5em 0;
+}
+
+.keeth-sec1 .header_wrapper .navbar-list .navbar-item {
+  padding: 0 1em;
+  font-size: 1.25em;
+  font-family: var(--PT);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.keeth-sec1 .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 5em;
+}
+
+.keeth-sec1 .text-container .banner-heading {
+  font-size: 2.813em;
+  font-weight: 700;
+  color: var(--535050);
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto 0.25em;
+}
+.keeth-sec1 .text-container .banner-subtitle {
+  font-size: 1.875em;
+  color: var(--F1B04C);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.keeth-sec2 {
+  background: var(--F0F0F0);
+}
+
+.keeth-sec2 .sec2-content {
+  padding: 5em 0;
+}
+
+.keeth-sec2 .sec2-content .about-row {
+  align-items: center;
+}
+
+.keeth-sec2 .sec2-content .title {
+  font-weight: 700;
+  color: var(--F1B04C);
+  font-size: 2.875em;
+  letter-spacing: 0.5px;
+  margin: 0 0 1em;
+}
+
+.keeth-sec2 .sec2-content .description {
+  color: var(--black);
+  font-size: 1.125em;
+  letter-spacing: 0.5px;
+  margin: 0 0 1em;
+  max-width: 85%;
+}
+
+.keeth-sec2 .sec2-content .about-img-wrapper {
+  overflow: hidden;
+}
+
+.keeth-sec2 .sec2-content .about-img-wrapper .about-us {
+  width: 100%;
+  max-width: 100%;
+  max-height: 40em;
+}
+
+@media (max-width: 992px) {
+  .keeth-sec1 .header_wrapper .navbar-list .navbar-item {
+    font-size: 1.4em;
+    padding: 0 0.75em;
+  }
+
+  .keeth-sec1 .text-container .banner-heading {
+    font-size: 3.2em;
+  }
+
+  .keeth-sec1 .text-container .banner-subtitle {
+    font-size: 2.2em;
+  }
+
+  .keeth-sec2 .sec2-content .about-img-wrapper {
+    display: none;
+  }
+
+  .keeth-sec2 .sec2-content .description {
+    max-width: 100%;
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 768px) {
+  .keeth-sec1 .img-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .keeth-sec1 .header_wrapper {
+    padding: 2em 0 0;
+  }
+}
