@@ -1,44 +1,97 @@
-.keeth-sec1 .keeth-container {
+/* SECTION 01 */
+/* SECTION 01 */
+/* SECTION 01 */
+
+.kh-sec1 {
+  position: relative;
+}
+
+.kh-sec1 .kh-container {
   max-width: 100%;
   padding: 0;
 }
 
-.keeth-sec1 .header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.kh-sec1 .video-background {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  aspect-ratio: 16/9;
 }
 
-.keeth-sec1 .img-wrapper {
+.kh-sec1 .video-foreground,
+.kh-sec1 .video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.kh-sec1 video.fullscreen {
+  position: absolute;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kh-sec1 video.fullscreen::-webkit-media-controls {
+  display: none !important;
+}
+
+.kh-sec1 .video-overlay {
+  background: rgba(255, 255, 255, 0);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.kh-sec1 .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.kh-sec1 .img-wrapper {
   overflow: hidden;
 }
 
-.keeth-sec1 .img-wrapper .banner-img {
+.kh-sec1 .img-wrapper .banner-img {
   width: 100%;
   object-position: center;
   object-fit: cover;
   border-bottom-left-radius: 50%;
 }
 
-.keeth-sec1 .header_wrapper {
+.kh-sec1 .header_wrapper {
   display: flex;
   justify-content: center;
   padding: 5em 0 0;
 }
 
-.keeth-sec1 .header_wrapper .logo {
+.kh-sec1 .header_wrapper .logo {
   width: 100%;
   max-width: 15em;
   margin: 0 auto;
 }
 
-.keeth-sec1 .header_wrapper .navbar-list {
+.kh-sec1 .header_wrapper .navbar-list {
   width: 100%;
   display: flex;
   padding: 2.5em 0;
 }
 
-.keeth-sec1 .header_wrapper .navbar-list .navbar-item {
+.kh-sec1 .header_wrapper .navbar-list .navbar-item {
   padding: 0 1em;
   font-size: 1.25em;
   font-family: var(--PT);
@@ -46,7 +99,7 @@
   cursor: pointer;
 }
 
-.keeth-sec1 .text-container {
+.kh-sec1 .text-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -54,92 +107,866 @@
   padding: 0 0 5em;
 }
 
-.keeth-sec1 .text-container .banner-heading {
-  font-size: 2.813em;
-  font-weight: 700;
+.kh-sec1 .text-container .banner-heading {
+  font-size: 3.813em;
+  font-weight: 800;
   color: var(--535050);
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0 auto 0.25em;
 }
-.keeth-sec1 .text-container .banner-subtitle {
-  font-size: 1.875em;
+
+.kh-sec1 .text-container .banner-subtitle {
+  font-size: 2.375em;
   color: var(--F1B04C);
   font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
 }
 
-.keeth-sec2 {
+/* SECTION 02 */
+/* SECTION 02 */
+/* SECTION 02 */
+
+.kh-sec2 {
   background: var(--F0F0F0);
 }
 
-.keeth-sec2 .sec2-content {
+.kh-sec2 .sec2-content {
   padding: 5em 0;
 }
 
-.keeth-sec2 .sec2-content .about-row {
+.kh-sec2 .sec2-content .about-row {
   align-items: center;
 }
 
-.keeth-sec2 .sec2-content .title {
-  font-weight: 700;
-  color: var(--F1B04C);
-  font-size: 2.875em;
-  letter-spacing: 0.5px;
+.kh-sec2 .sec2-content .section-title {
   margin: 0 0 1em;
 }
 
-.keeth-sec2 .sec2-content .description {
-  color: var(--black);
-  font-size: 1.125em;
-  letter-spacing: 0.5px;
+.kh-sec2 .sec2-content .section-description {
   margin: 0 0 1em;
-  max-width: 85%;
+  max-width: 95%;
 }
 
-.keeth-sec2 .sec2-content .about-img-wrapper {
+.kh-sec2 .sec2-content .about-img-wrapper {
   overflow: hidden;
 }
 
-.keeth-sec2 .sec2-content .about-img-wrapper .about-us {
+.kh-sec2 .sec2-content .about-img-wrapper .about-us {
   width: 100%;
   max-width: 100%;
   max-height: 40em;
+  border-radius: 5px;
+}
+
+/* SECTION 03 */
+/* SECTION 03 */
+/* SECTION 03 */
+
+.kh-sec3 {
+  background: var(--white);
+}
+
+.kh-sec3 .sec3-content {
+  padding: 5em 0 2.5em;
+}
+
+.kh-sec3 .sec3-content .text-container {
+  text-align: center;
+  padding: 0 0 2.5em;
+}
+
+.kh-sec3 .sec3-content .text-container .section-title {
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec3 .sec3-content .text-container .kh-booking-link {
+  color: var(--F1B04C);
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 2em;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec3 .sec3-content .text-container .section-description {
+  margin: 1.5em auto 0;
+  max-width: 95%;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper {
+  display: flex;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper article {
+  height: 100%;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card {
+  position: relative;
+  height: 100%;
+  box-shadow: var(--cardShadow);
+  margin: 0 0.75em;
+  padding: 0;
+  text-align: left;
+  border-radius: 1.5em;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card .img-wrapper {
+  width: 100%;
+  max-width: 100%;
+  max-height: fit-content;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.kh-sec3
+  .sec3-content
+  .kh-house-cards-wrapper
+  .house-card
+  .img-wrapper
+  .kh-house-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 20em;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card:hover {
+  box-shadow: var(--cardHoverShadow);
+  transform: scale(1.02);
+}
+
+.kh-sec3
+  .sec3-content
+  .kh-house-cards-wrapper
+  .house-card:hover
+  .img-wrapper
+  .kh-house-img {
+  transform: scale(1.1);
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card .card-text {
+  padding: 2em 1.5em 4em;
+  text-align: left;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.kh-sec3
+  .sec3-content
+  .kh-house-cards-wrapper
+  .house-card
+  .card-text
+  .card-title {
+  font-size: 1.75em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec3
+  .sec3-content
+  .kh-house-cards-wrapper
+  .house-card
+  .card-text
+  .card-description {
+  font-size: 1.125em;
+  letter-spacing: 0.24px;
+  line-height: 1.8em;
+  margin: 0;
+  padding: 1em 0 1.5em;
+}
+
+.kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card .cta-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5em 2em;
+}
+
+.kh-sec3
+  .sec3-content
+  .kh-house-cards-wrapper
+  .house-card
+  .cta-wrapper
+  .card-cta {
+  color: var(--F1B04C);
+  font-size: 1.25em;
+  letter-spacing: 0.24px;
+  line-height: 1.8em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* PHASE 01 GALLERY */
+/* PHASE 01 GALLERY */
+/* PHASE 01 GALLERY */
+
+.kh-phase-1-gallery {
+  position: relative;
+  height: 0;
+  transition: all 0.15s ease-out;
+  overflow: hidden;
+  background: var(--F1B04C);
+}
+
+.kh-phase-1-gallery .close-icon {
+  width: 100%;
+  max-width: 2em;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.kh-phase-1-gallery .kh-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.kh-phase-1-gallery.active {
+  height: auto;
+  transition: all 0.25s ease-in;
+  margin: 2.5em 0;
+}
+
+.kh-phase-1-gallery .gallery-content {
+  padding: 5em 0;
+}
+
+.kh-phase-1-gallery .text-container .section-title {
+  color: var(--white);
+  text-align: center;
+  margin: 0 0 1em;
+}
+
+.kh-phase-1-gallery .gallery-content .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+}
+
+.kh-phase-1-gallery .gallery-content .gallery-grid .gallery-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  /* aspect-ratio: 16/9; */
+  aspect-ratio: 4/3;
+  padding: 0 0 1em;
+}
+
+/* SECTION 04 */
+/* SECTION 04 */
+/* SECTION 04 */
+
+.kh-sec4 {
+  background: var(--white);
+}
+
+.kh-sec4 .sec4-content {
+  padding: 2.5em 0 5em;
+}
+
+.kh-sec4 .sec4-content .text-container {
+  text-align: center;
+  padding: 0 0 2.5em;
+}
+
+.kh-sec4 .sec4-content .text-container .section-title {
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec4 .sec4-content .text-container .kh-booking-link {
+  color: var(--F1B04C);
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 2em;
+  text-decoration: none;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec4 .sec4-content .text-container .section-description {
+  margin: 1.5em auto 0;
+  max-width: 95%;
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper {
+  display: flex;
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper article {
+  height: 100%;
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper .house-card {
+  position: relative;
+  height: 100%;
+  box-shadow: var(--cardShadow);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-radius: 1.5em;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper .house-card:hover {
+  box-shadow: var(--cardHoverShadow);
+  transform: scale(1.02);
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper .house-card .img-wrapper {
+  width: 100%;
+  max-width: 100%;
+  max-height: fit-content;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.kh-sec4
+  .sec4-content
+  .kh-house-cards-wrapper
+  .house-card
+  .img-wrapper
+  .kh-house-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 15em;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.kh-sec4
+  .sec4-content
+  .kh-house-cards-wrapper
+  .house-card:hover
+  .img-wrapper
+  .kh-house-img {
+  transform: scale(1.1);
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper .house-card .card-text {
+  padding: 2em 1.5em 4em;
+  text-align: left;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.kh-sec4
+  .sec4-content
+  .kh-house-cards-wrapper
+  .house-card
+  .card-text
+  .card-title {
+  font-size: 1.75em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+.kh-sec4
+  .sec4-content
+  .kh-house-cards-wrapper
+  .house-card
+  .card-text
+  .card-description {
+  font-size: 1.125em;
+  letter-spacing: 0.24px;
+  line-height: 1.8em;
+  margin: 0;
+  padding: 1em 0 1.5em;
+}
+
+.kh-sec4 .sec4-content .kh-house-cards-wrapper .house-card .cta-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5em 2em;
+}
+
+.kh-sec4
+  .sec4-content
+  .kh-house-cards-wrapper
+  .house-card
+  .cta-wrapper
+  .card-cta {
+  color: var(--F1B04C);
+  font-size: 1.25em;
+  letter-spacing: 0.24px;
+  line-height: 1.8em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* PHASE 02 GALLERY */
+/* PHASE 02 GALLERY */
+/* PHASE 02 GALLERY */
+
+.kh-phase-2-gallery {
+  position: relative;
+  height: 0;
+  transition: all 0.15s ease-out;
+  overflow: hidden;
+  background: var(--F1B04C);
+}
+
+.kh-phase-2-gallery .close-icon {
+  width: 100%;
+  max-width: 2em;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.kh-phase-2-gallery .kh-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.kh-phase-2-gallery.active {
+  height: auto;
+  transition: all 0.25s ease-in;
+}
+
+.kh-phase-2-gallery .gallery-content {
+  padding: 5em 0;
+}
+
+.kh-phase-2-gallery .text-container .section-title {
+  color: var(--white);
+  text-align: center;
+  margin: 0 0 1em;
+}
+
+.kh-phase-2-gallery .gallery-content .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+}
+
+.kh-phase-2-gallery .gallery-content .gallery-grid .gallery-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  /* aspect-ratio: 16/9; */
+  aspect-ratio: 4/3;
+  padding: 0 0 1em;
+}
+
+/* SECTION 05 */
+/* SECTION 05 */
+/* SECTION 05 */
+
+.kh-sec5 {
+  background: var(--F0F0F0);
+}
+
+.kh-sec5 .sec5-content {
+  padding: 5em 0;
+}
+
+.kh-sec5 .sec5-content .about-row {
+  align-items: center;
+}
+
+.kh-sec5 .img-wrapper .kh-host {
+  width: 100%;
+  max-width: 100%;
+}
+
+.kh-sec5 .text-container .kh-about-description {
+  padding: 1.5em 0 0;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+
+.kh-footer {
+  background: #000000;
+  color: var(--white);
+}
+
+.kh-footer .footer-content {
+  padding: 5em 0 4em;
+}
+
+.kh-footer .copyright-text {
+  color: var(--white);
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+}
+.kh-footer .copyright-text span {
+  display: inline;
+}
+
+.kh-footer .footer-content .footer-row {
+  align-items: center;
+}
+
+.kh-footer .footer-content .contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2.5em;
+}
+
+.kh-footer .footer-content .contact-box .footer-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2em;
+  letter-spacing: 0;
+  color: var(--F1B04C);
+}
+
+.kh-footer .footer-content .contact-box .section-description {
+  color: var(--white);
+  text-decoration: none;
+  margin: 1em 0 2em;
+}
+
+.kh-footer .footer-content .contact-box .social-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.kh-footer .footer-content .contact-box .social-wrapper .social-item {
+  margin: 0 1.5em;
+}
+
+.kh-footer .footer-content .contact-box .social-wrapper .social-icon {
+  width: 100%;
+  max-width: 3.125em;
+}
+
+.kh-footer .footer-content .footer-logo {
+  width: 100%;
+  max-width: 17.5em;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .kh-sec4 .sec4-content .kh-house-cards-wrapper .responsive-card {
+    margin: 0 0 5em;
+  }
 }
 
 @media (max-width: 992px) {
-  .keeth-sec1 .header_wrapper .navbar-list .navbar-item {
+  /* SECTION 01 */
+  /* SECTION 01 */
+  /* SECTION 01 */
+  .kh-sec1 .header_wrapper .navbar-list .navbar-item {
     font-size: 1.4em;
     padding: 0 0.75em;
   }
 
-  .keeth-sec1 .text-container .banner-heading {
+  .kh-sec1 .text-container .banner-heading {
     font-size: 3.2em;
   }
 
-  .keeth-sec1 .text-container .banner-subtitle {
+  .kh-sec1 .text-container .banner-subtitle {
     font-size: 2.2em;
   }
 
-  .keeth-sec2 .sec2-content .about-img-wrapper {
+  /* SECTION 02 */
+  /* SECTION 02 */
+  /* SECTION 02 */
+
+  .kh-sec2 .sec2-content .about-img-wrapper {
     display: none;
   }
 
-  .keeth-sec2 .sec2-content .description {
+  .kh-sec2 .sec2-content .description {
     max-width: 100%;
     font-size: 1.6em;
+  }
+
+  /* SECTION 03 */
+  /* SECTION 03 */
+  /* SECTION 03 */
+
+  .kh-sec3 .sec3-content {
+    padding: 5em 0 0;
+  }
+
+  .kh-sec3 .sec3-content .text-container .kh-booking-link {
+    margin: 0 auto 0;
+    font-size: 2.4em;
+  }
+
+  .kh-sec3 .sec3-content .text-container .section-description,
+  .kh-sec4 .sec4-content .text-container .section-description {
+    max-width: 100%;
+  }
+
+  .kh-sec3 .sec3-content .kh-house-cards-wrapper .responsive-card {
+    margin: 0 0 5em;
+  }
+
+  .kh-sec3 .sec3-content .kh-house-cards-wrapper .house-card {
+    margin: 0;
+  }
+
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-title,
+  .kh-sec4
+    .sec4-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-title {
+    font-size: 2.4em;
+  }
+
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-description,
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .cta-wrapper
+    .card-cta,
+  .kh-sec4
+    .sec4-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-description,
+  .kh-sec4
+    .sec4-content
+    .kh-house-cards-wrapper
+    .house-card
+    .cta-wrapper
+    .card-cta {
+    font-size: 1.4em;
+  }
+
+  /* PHASE 01 & 02 GALLERY */
+  /* PHASE 01 & 02 GALLERY */
+  /* PHASE 01 & 02 GALLERY */
+
+  .kh-phase-1-gallery .gallery-content,
+  .kh-phase-2-gallery .gallery-content {
+    margin: 0 1.5em;
+  }
+
+  .kh-phase-1-gallery .gallery-content .gallery-grid,
+  .kh-phase-2-gallery .gallery-content .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+  }
+
+  .kh-phase-1-gallery .gallery-content .gallery-grid .gallery-img,
+  .kh-phase-2-gallery .gallery-content .gallery-grid .gallery-img {
+    padding: 0 0 1.5em;
+  }
+
+  /* SECTION 04 */
+  /* SECTION 04 */
+  /* SECTION 04 */
+
+  .kh-sec4 .sec4-content {
+    padding: 0 0 2.5em;
+  }
+
+  .kh-sec4 .sec4-content .text-container .kh-booking-link {
+    margin: 0 auto;
+    font-size: 2.4em;
+  }
+
+  /* FOOTER */
+  /* FOOTER */
+  /* FOOTER */
+
+  .kh-footer .footer-content .footer-row {
+    align-items: flex-start;
+  }
+
+  .kh-footer .footer-content .contact-box {
+    padding: 0 0 5em;
   }
 }
 
 @media (max-width: 768px) {
-  .keeth-sec1 .img-wrapper {
+  /* SECTION 01 */
+  /* SECTION 01 */
+  /* SECTION 01 */
+  .kh-sec1 .img-wrapper {
+    display: none;
+  }
+
+  /* SECTION 02 */
+  /* SECTION 02 */
+  /* SECTION 02 */
+
+  .kh-sec2 .sec2-content {
+    padding: 4em 0 2em;
+  }
+
+  .kh-sec2 .sec2-content .section-description {
+    max-width: 100%;
+    margin: 0 0 2em;
+  }
+
+  /* SECTION 03 */
+  /* SECTION 03 */
+  /* SECTION 03 */
+
+  .kh-sec3 .sec3-content {
+    padding: 4em 0 2em;
+  }
+
+  .kh-sec3 .sec3-content .text-container {
+    padding: 0 0 4em;
+  }
+
+  .kh-sec3 .sec3-content .text-container .kh-booking-link {
+    font-size: 1.8em;
+    margin: 1em auto 0;
+  }
+
+  .kh-sec3 .sec3-content .text-container .section-description {
+    text-align: left;
+    margin: 1em auto 0;
+  }
+
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-title {
+    font-size: 2.4em;
+  }
+
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .card-text
+    .card-description {
+    font-size: 1.4em;
+  }
+
+  .kh-sec3
+    .sec3-content
+    .kh-house-cards-wrapper
+    .house-card
+    .cta-wrapper
+    .card-cta {
+    font-size: 1.4em;
+  }
+
+  /* FOOTER */
+  /* FOOTER */
+  /* FOOTER */
+
+  .kh-footer .footer-content {
+    padding: 5em 0 0;
+  }
+
+  .kh-footer .footer-content .contact-box {
+    padding: 0 0 5em;
+  }
+
+  .kh-footer .footer-content .contact-box .footer-title {
+    font-size: 2em;
+  }
+
+  .kh-footer .footer-content .contact-box .social-wrapper .social-item {
+    margin: 0 0.75em;
+  }
+
+  .kh-footer .footer-content .contact-box .social-wrapper .social-icon {
+    max-width: 5em;
+  }
+
+  .kh-footer .footer-content .footer-logo {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .keeth-sec1 .header_wrapper {
+  /* SECTION 01 */
+  /* SECTION 01 */
+  /* SECTION 01 */
+  .kh-sec1 .header_wrapper {
     padding: 2em 0 0;
+  }
+
+  .kh-sec1 .text-container {
+    padding: 2.5em 0 5em;
+  }
+
+  .kh-sec1 .img-wrapper {
+    display: block;
+  }
+
+  .kh-sec1 .img-wrapper .banner-img {
+    border-bottom-left-radius: 0%;
+  }
+
+  /* PHASE 01 & 02 GALLERY */
+  /* PHASE 01 & 02 GALLERY */
+  /* PHASE 01 & 02 GALLERY */
+
+  .kh-phase-1-gallery .gallery-content .gallery-grid,
+  .kh-phase-2-gallery .gallery-content .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2em;
+  }
+
+  .kh-phase-1-gallery .close-icon,
+  .kh-phase-2-gallery .close-icon {
+    max-width: 1.5em;
+    top: 1em;
+    right: 1em;
+  }
+}
+
+@media (max-width: 360px) {
+  .kh-sec1 .header_wrapper .navbar-list .navbar-item {
+    font-size: 1.2em;
   }
 }

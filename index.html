@@ -36,11 +36,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css"
+        integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./resources/css/global.css">
     <link rel="stylesheet" href="./resources/css/style.css">
 </head>
@@ -52,8 +50,19 @@
         <!----------------------------------- #HEADER ----------------------------------->
         <!----------------------------------- #HEADER ----------------------------------->
         <!----------------------------------- #HEADER ----------------------------------->
-        <section class="keeth-sec1">
-            <div class="keeth-container">
+        <section id="home" class="kh-sec1">
+            <!-- <video class="fullscreen" src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
+                playsinline autoplay muted loop>
+            </video> -->
+            <!-- <div class="video-background">
+                <div class="video-foreground">
+                    <iframe
+                        src="https://www.youtube.com/embed/ByeQq9gv0Ts?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=ByeQq9gv0Ts"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-overlay"></div> -->
+            <div class="kh-container">
                 <div class="row">
                     <div class="col-md-7 col-lg-6 header-container">
                         <header class="header_wrapper">
@@ -63,10 +72,10 @@
                                         class="logo">
                                 </div>
                                 <ul class="navbar-list">
-                                    <li class="navbar-item">Home</li>
-                                    <li class="navbar-item">About Us</li>
-                                    <li class="navbar-item">Our Houses</li>
-                                    <li class="navbar-item">Contact Us</li>
+                                    <li class="navbar-item" onclick="scrollHandler(`#home`, 0)">Home</li>
+                                    <li class="navbar-item" onclick="scrollHandler(`#aboutUs`, 75)">About Us</li>
+                                    <li class="navbar-item" onclick="scrollHandler(`#ourHouses`, 75)">Our Houses</li>
+                                    <li class="navbar-item" onclick="scrollHandler(`#footer`, 75)">Contact Us</li>
                                 </ul>
                             </nav>
                         </header>
@@ -90,20 +99,24 @@
         <!----------------------------------- #MAIN ARTICLE ----------------------------------->
         <!----------------------------------- #MAIN ARTICLE ----------------------------------->
         <article>
-            <section class="keeth-sec2">
-                <div class="keeth-container">
+            <!----------------------------------- #ABOUT US ----------------------------------->
+            <!----------------------------------- #ABOUT US ----------------------------------->
+            <!----------------------------------- #ABOUT US ----------------------------------->
+            <section id="aboutUs" class="kh-sec2">
+                <div class="kh-container">
                     <div class="sec2-content">
                         <div class="row about-row">
                             <div class="col-lg-8">
                                 <div class="text-container">
-                                    <h2 class="title">About Us</h2>
-                                    <p class="description">
+                                    <h2 class="section-title">About Us</h2>
+                                    <p class="section-description">
                                         Every so often, we yearn to escape the busy life and noisy cities that never
                                         sleep.
                                         If a peaceful retreat amidst nature is what you’re seeking, then look no
                                         further.
                                     </p>
-                                    <p class="description">Keeth House is an organically built eco-stay situated near
+                                    <p class="section-description">Keeth House is an organically built eco-stay situated
+                                        near
                                         the
                                         beautiful town of Auroville. The word ‘Keeth’ denotes the thatch roof that is
                                         used
@@ -111,11 +124,13 @@
                                         still
                                         seen across Indian villages, the thatched-roof bamboo cottages are built with
                                         locally sourced materials.</p>
-                                    <p class="description">Surrounded by a forest of lush green trees, the houses retain
+                                    <p class="section-description">Surrounded by a forest of lush green trees, the
+                                        houses retain
                                         a
                                         natural coolness and fresh atmosphere. The tranquil location combined with the
                                         exposed brick walls and rustic aesthetic is assured to rejuvenate your soul.</p>
-                                    <p class="description">With Auroville and Pondicherry minutes away, you have a
+                                    <p class="section-description">With Auroville and Pondicherry minutes away, you have
+                                        a
                                         myriad of
                                         things to do and places to visit - be it de-stressing by the beach, taking a
                                         walk
@@ -124,7 +139,8 @@
                                         eateries. Additionally, if you’re an animal lover, our friendly dogs and cats on
                                         the
                                         premises will make you lose track of time.</p>
-                                    <p class="description">Whether you are traveling solo, as a couple, or as a group, a
+                                    <p class="section-description">Whether you are traveling solo, as a couple, or as a
+                                        group, a
                                         warm and peaceful stay awaits you at Keeth House.</p>
                                 </div>
                             </div>
@@ -139,7 +155,540 @@
                     </div>
                 </div>
             </section>
+
+            <!----------------------------------- #PHASE I cards & Gallery ----------------------------------->
+            <!----------------------------------- #PHASE I cards & Gallery ----------------------------------->
+            <!----------------------------------- #PHASE I cards & Gallery ----------------------------------->
+            <section id="ourHouses" class="kh-sec3">
+                <div class="kh-container">
+                    <div class="sec3-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Our Houses</h2>
+                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                class="kh-booking-link section-description" target="_blank">Keeth House, Phase I</a>
+                            <p class="section-description">Keeth House Phase I is a cozy and intimate property that
+                                accommodates three of our beautiful houses. With vibrant trees and foliage covering
+                                almost every inch of the ground, the property is designed to make you feel relaxed from
+                                the moment you step in. We have a kitchen/diner right within the premises where you are
+                                welcome to come in and relish a hearty homemade breakfast or a hot beverage.</p>
+                        </div>
+                        <div class="kh-house-cards-wrapper">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-4 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - I</h3>
+                                                <p class="card-description">Our very first creation will take you back
+                                                    to the traditional houses of Tamil Nadu in the 90s. The two-level
+                                                    cottage with a sprawling porch or ‘thinnai’ at the entrance, is
+                                                    ideal for a small group of friends or a family of four.</p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-I-Cta card-cta"
+                                                    onclick="openGallery(1, '.kh-phase-1-gallery')">View
+                                                    Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-II.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - II</h3>
+                                                <p class="card-description">The two-level, octagon-shaped cottage is a
+                                                    multifunctional house designed to meet all your needs. Whether
+                                                    you're seeking a long workcation or just a weekend getaway with
+                                                    friends, Keeth House ll is the perfect destination.
+                                                </p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-I-Cta card-cta"
+                                                    onclick="openGallery(2, '.kh-phase-1-gallery')">View
+                                                    Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-III.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - III</h3>
+                                                <p class="card-description">The house is slightly tucked away to give
+                                                    you an off-the-grid experience. With picturesque views during the
+                                                    day and the soft warm glow of lights at night, it’s an ideal
+                                                    destination for an intimate romantic getaway.</p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-I-Cta card-cta"
+                                                    onclick="openGallery(3, '.kh-phase-1-gallery')">View
+                                                    Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kh-phase-1-gallery" class="kh-phase-1-gallery">
+                <div class="kh-container">
+                    <div id="gallery-1" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House I Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="gallery-2" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House II Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="gallery-3" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House III Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <img id="gallery-1-close" width="25" height="25" src="./resources/images/general/close-icon.jpg"
+                    alt="close" class="close-icon" loading="lazy">
+            </section>
+
+            <!----------------------------------- #PHASE II cards & Gallery ----------------------------------->
+            <!----------------------------------- #PHASE II cards & Gallery ----------------------------------->
+            <!----------------------------------- #PHASE II cards & Gallery ----------------------------------->
+
+            <section class="kh-sec4">
+                <div class="kh-container">
+                    <div class="sec4-content">
+                        <div class="text-container">
+                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                class="kh-booking-link section-description" target="_blank">Keeth House, Phase II</a>
+                            <p class="section-description">Located a few kilometers away from Keeth House Phase 1, the
+                                secluded property boasts four charming houses each with its unique attributes. The high
+                                ceilings of the cottages along with the lush tree cover across the expansive land create
+                                a cool and serene atmosphere both inside and out. The verdant setting with vibrant flora
+                                and fauna makes Keeth House Phase 2 a paradise for nature lovers.</p>
+                        </div>
+                        <div class="kh-house-cards-wrapper">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-IV.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - IV</h3>
+                                                <p class="card-description">The charming cottage, which efficiently
+                                                    combines the best features of all our houses, is best suited for
+                                                    couples seeking a quiet nature retreat. The high thatched roof and
+                                                    large windows with gorgeous views make the interiors spacious and
+                                                    airy without compromising on comfort.</p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-II-Cta card-cta"
+                                                    onclick="openGallery(4, '.kh-phase-2-gallery')">View Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-V.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - V</h3>
+                                                <p class="card-description">One of our biggest houses, this cottage
+                                                    symbolizes rustic elegance. With a bathtub inside and an outdoor
+                                                    shower in the backyard, you are sure to enjoy a luxurious stay with
+                                                    your loved one. It has a spacious courtyard at the entrance with
+                                                    ample seating for you to relax and enjoy the crisp air.</p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-II-Cta card-cta"
+                                                    onclick="openGallery(5, '.kh-phase-2-gallery')">View Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/keeth-house-VI.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">Keeth House - VI</h3>
+                                                <p class="card-description">The idyllic setting and unique design of the
+                                                    cottage make it a blissful retreat, perfect for sipping drinks by
+                                                    the pond or hosting a cookout party with your friends. As you walk
+                                                    towards the house, you are greeted by a small, pristine pond at the
+                                                    front, exclusive to this cottage.</p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-II-Cta card-cta"
+                                                    onclick="openGallery(6, '.kh-phase-2-gallery')">View Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 responsive-card">
+                                    <article>
+                                        <div class="house-card">
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="img-wrapper">
+                                                <img src="./resources/images/homepage/properties/the-khaya-nest.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </a>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                target="_blank" class="card-text">
+                                                <h3 class="card-title">The Khaya Nest</h3>
+                                                <p class="card-description">We took connecting with nature to another
+                                                    level - a level that’s 10 meters above the ground! Khaya Nest is our
+                                                    very own tree house built around the majestic African Mahogany tree
+                                                    known as the ‘Khaya’ tree. Built with intricate planning and care,
+                                                    Khaya Nest will give you a unique, safe, and adventurous experience.
+                                                </p>
+                                            </a>
+                                            <div class="cta-wrapper">
+                                                <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7860"
+                                                    target="_blank" class="card-cta">Book Now</a>
+                                                <div class="phase-II-Cta card-cta"
+                                                    onclick="openGallery(7, '.kh-phase-2-gallery')">View Gallery</div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kh-phase-2-gallery" class="kh-phase-2-gallery">
+                <div class="kh-container">
+                    <div id="gallery-4" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House IV Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="gallery-5" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House V Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="gallery-6" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">Keeth House VI Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="gallery-7" class="gallery-content">
+                        <div class="text-container">
+                            <h2 class="section-title">The Khaya Nest Gallery</h2>
+                        </div>
+                        <div class="gallery-grid">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-II.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400"
+                                src="./resources/images/homepage/properties/keeth-house-III.jpg" alt=""
+                                class="gallery-img" loading="lazy">
+                            <img width="400" height="400" src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                alt="" class="gallery-img" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <img id="gallery-2-close" width="25" height="25" src="./resources/images/general/close-icon.jpg"
+                    alt="close" class="close-icon" loading="lazy">
+            </section>
+
+            <section class="kh-sec5">
+                <div class="kh-container">
+                    <article class="sec5-content">
+                        <div class="row about-row">
+                            <div class="col-lg-4">
+                                <div class="img-wrapper">
+                                    <img width="670" height="589" src="./resources/images/homepage/about_image.png"
+                                        alt="the keethhouse host" class="kh-host" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="text-container">
+                                    <h2 class="section-title">About The Host</h2>
+                                    <p class="kh-about-description section-description">Growing up, I have always been
+                                        interested
+                                        in exploring different places and meeting new people. Residing in Auroville, I
+                                        got the chance to meet many travelers, and I began hosting long before I
+                                        realized my passion for it.</p>
+                                    <p class="kh-about-description section-description">Through Couchsurfing, I opened
+                                        my home to
+                                        people from across the world. Meeting travelers, learning about their culture,
+                                        and listening to their adventures are something I relish immensely.</p>
+                                    <p class="kh-about-description section-description">Keeth House is a beautiful dream
+                                        which
+                                        stemmed out of all the little things that I love. What started as a personal
+                                        project for me and my family, slowly became a cottage to host guests in 2019.
+                                    </p>
+                                    <p class="kh-about-description section-description">I try to follow a sustainable
+                                        and
+                                        minimalist lifestyle which is reflected in Keeth House. From hiring local
+                                        vendors to sourcing organic materials, I poured my heart into the build,
+                                        planning out every little detail to ensure that the eco-stay offers an authentic
+                                        experience.</p>
+                                    <p class="kh-about-description section-description">After hosting people at Keeth
+                                        House Phase
+                                        1 for four years, we decided to expand and build more unique houses for guests
+                                        to experience. Following months of planning and hard work, we have now completed
+                                        Keeth House Phase 2, which includes three cottages and one tree house, bringing
+                                        the total number of houses to seven.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </article>
+
+        <footer id="footer" class="kh-footer">
+            <div class="kh-container">
+                <div class="footer-content">
+                    <div class="row footer-row">
+                        <div class="col-md-4">
+                            <div class="contact-box">
+                                <h3 class="footer-title">Keeth House, Phase I</h3>
+                                <address>
+                                    <a class="section-description" href="https://maps.app.goo.gl/wWpMwnd529B9Lc4W9"
+                                        target="_blank">119/8, Second
+                                        Cross, Lakshya Township, Auro Archard, Near Auroville, Tamil Nadu</a>
+                                </address>
+                                <div class="social-wrapper">
+                                    <a href="https://www.instagram.com/keethhouse/" target="_blank" class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/instagram-icon.png"
+                                            alt="instagram logo" class="social-icon" loading="lazy"></a>
+                                    <a href="https://maps.app.goo.gl/wWpMwnd529B9Lc4W9" target="_blank"
+                                        class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/google-map-icon.png"
+                                            alt="google map logo" class="social-icon" loading="lazy"></a>
+                                    <a href="mailto:reservations@keethhouse.com" target="_blank" class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/mail-icon.png"
+                                            alt="email logo" class="social-icon" loading="lazy"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-box">
+                                <h3 class="footer-title">Keeth House, Phase II</h3>
+                                <address>
+                                    <a class="section-description" href="https://maps.app.goo.gl/PmKihgkSj6w9YyHE6"
+                                        target="_blank">117, Auroville
+                                        Road, Near Red Earth, Irumbai, Tamil Nadu</a>
+                                </address>
+                                <div class="social-wrapper">
+                                    <a href="https://www.instagram.com/keethhouse/" target="_blank" class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/instagram-icon.png"
+                                            alt="instagram logo" class="social-icon" loading="lazy"></a>
+                                    <a href="https://maps.app.goo.gl/PmKihgkSj6w9YyHE6" target="_blank"
+                                        class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/google-map-icon.png"
+                                            alt="google map logo" class="social-icon" loading="lazy"></a>
+                                    <a href="mailto:reservations@keethhouse.com" target="_blank" class="social-item">
+                                        <img width="50" height="50" src="./resources/images/general/mail-icon.png"
+                                            alt="email logo" class="social-icon" loading="lazy"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img width="225" height="225" src="./resources/images/general/footer-logo.png"
+                                alt="footer logo" class="footer-logo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright-text">Estd. 2019 Keeth House | <span id="year"></span> &#169; All Rights
+                    Reserved.</p>
+            </div>
+        </footer>
     </main>
 
     <!----------------------------------- #FOOTER ----------------------------------->
@@ -150,12 +699,6 @@
     <!----------------------------------- #SCRIPTS ----------------------------------->
     <!----------------------------------- #SCRIPTS ----------------------------------->
     <!----------------------------------- #SCRIPTS ----------------------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
-        integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./resources/js/main.js"></script>
 </body>
 
