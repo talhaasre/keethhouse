@@ -348,7 +348,6 @@ section {
 
 .section-description {
   font-size: 1.25em;
-  font-weight: 500;
   letter-spacing: 0;
   line-height: 1.7em;
 }
@@ -460,6 +459,7 @@ section {
 
   .section-description {
     font-size: 1.4em;
+    text-align: justify;
   }
 }
 

@@ -1,5 +1,29 @@
 "use strict";
 
+//mobile menu
+const navOpenBtn = document.querySelector("[data-nav-open-btn]");
+const navbar = document.querySelector("[data-navbar]");
+
+const elemArr = [navOpenBtn];
+
+for (let i = 0; i < elemArr.length; i++) {
+  elemArr[i].addEventListener("click", function () {
+    navbar.classList.toggle("active");
+    navOpenBtn.classList.toggle("open");
+  });
+}
+
+/* toggle navbar when click any navbar-link */
+
+const navbarLinks = document.querySelectorAll("[data-navbar-link]");
+
+for (let i = 0; i < navbarLinks.length; i++) {
+  navbarLinks[i].addEventListener("click", function () {
+    navbar.classList.toggle("active");
+    navOpenBtn.classList.toggle("open");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const hideLoader = () => {
     const loader = document.querySelector(".loader");
