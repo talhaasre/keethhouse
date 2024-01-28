@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://keethhouse.vercel.app/sitemap.xml
+Sitemap: https://keethhouse.com/sitemap.xml
