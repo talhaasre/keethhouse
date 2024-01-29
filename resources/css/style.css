@@ -889,9 +889,11 @@
     padding: 0 0 4em;
   }
 
-  .kh-sec3 .sec3-content .text-container .kh-booking-link {
+  .kh-sec3 .sec3-content .text-container .kh-booking-link,
+  .kh-sec4 .sec4-content .text-container .kh-booking-link {
     font-size: 1.8em;
     margin: 1em auto 0;
+    text-align: center;
   }
 
   .kh-sec3 .sec3-content .text-container .section-description {

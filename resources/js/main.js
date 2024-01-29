@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  window.scroll(0, 0);
 });
 
 function openGallery(boxNumber, galleryNo) {
