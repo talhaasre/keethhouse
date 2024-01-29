@@ -640,13 +640,19 @@
 }
 
 .kh-footer .copyright-text {
+  font-size: 1.2em;
   color: var(--white);
   display: block;
   text-align: center;
   padding: 1em 0;
 }
+
 .kh-footer .copyright-text span {
   display: inline;
+}
+
+.kh-footer .copyright-text .keeth-copy {
+  color: var(--F1B04C);
 }
 
 .kh-footer .footer-content .footer-row {
