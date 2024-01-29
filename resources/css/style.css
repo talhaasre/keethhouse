@@ -78,7 +78,7 @@
 }
 
 .kh-sec1 .kh-video-foreground,
-.kh-sec1 .kh-video-background iframe {
+.kh-sec1 .kh-video-background video {
   position: absolute;
   top: 0;
   left: 0;
