@@ -42,7 +42,7 @@ body {
   overflow-x: hidden;
 }
 
-.loader {
+.kh-loader {
   position: relative;
   background-image: url("../../loader-new.svg");
   background-repeat: no-repeat;

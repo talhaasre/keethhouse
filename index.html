@@ -65,17 +65,19 @@
         <div class="kh-container kh-header-container">
             <header class="kh-header_wrapper">
                 <div class="kh-logo-wrapper">
-                    <img width="158" height="95" src="./resources/images/general/footer-logo.png" alt="keeth logo"
-                        class="kh-logo">
+                    <img width="158" height="95" src="./resources/images/general/keeth-house-square.jpg"
+                        alt="keeth logo" class="kh-logo">
                 </div>
                 <nav>
                     <ul class="kh-navbar-list" data-navbar>
                         <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#home`, 0)">Home</li>
                         <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#aboutUs`, 75)">About Us
                         </li>
-                        <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#ourHouses`, 75)">Our Houses
+                        <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#ourHouses`, 75)">Our
+                            Houses
                         </li>
-                        <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#footer`, 75)">Contact Us
+                        <li data-navbar-link class="kh-navbar-item" onclick="scrollHandler(`#footer`, 75)">Contact
+                            Us
                         </li>
                     </ul>
                     <div class="kh-icon-title">
@@ -97,18 +99,24 @@
             <!----------------------------------- #BANNER ----------------------------------->
             <!----------------------------------- #BANNER ----------------------------------->
             <!----------------------------------- #BANNER ----------------------------------->
-            <section id="home" class="kh-sec1">
+            <section id="home" class="kh-sec1" onclick="toggleMute();">
                 <div class="kh-video-background">
                     <div class="kh-video-foreground">
-                        <video src="./resources/images/keeth-house-video.mp4" muted autoplay loop playsinline>
+                        <video id="keeth_video" src="./resources/images/keeth-house-video.mp4" muted autoplay loop
+                            playsinline>
                         </video>
                     </div>
                 </div>
                 <div class="kh-video-overlay"></div>
                 <div class="kh-container">
                     <div id="kh-banner-content" class="kh-text-container">
-                        <h1 class="kh-banner-heading">KEETH HOUSE</h1>
-                        <p class="kh-banner-subtitle">"EXPERIENCE NATURAL LIVING"</p>
+                        <!-- <h1 class="kh-banner-heading">KEETH HOUSE</h1>
+                        <p class="kh-banner-subtitle">"EXPERIENCE NATURAL LIVING"</p> -->
+                        <div id="kh-unmute-wrapper" class="kh-img_wrapper">
+                            <img width="40" height="40" src="./resources/images/homepage/Speaker_Icon.svg"
+                                alt="speaker on" class="kh-speaker">
+                            <p class="kh-banner-subtitle">Play audio</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -160,14 +168,14 @@
                                         warm and peaceful stay awaits you at Keeth House.</p>
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <img width="800" height="581"
+                                    src="./resources/images/homepage/properties/keeth-house-VI.jpg" alt="keeth banner"
+                                    class="kh-banner-img">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <picture class="kh-img-wrapper">
-                    <source type="image/webp" srcset="./resources/images/homepage/home_slide_1.webp">
-                    <img width="800" height="581" src="./resources/images/homepage/home_slide_1.jpg" alt="keeth banner"
-                        class="kh-banner-img">
-                </picture>
             </section>
 
             <!----------------------------------- #PHASE I cards & Gallery ----------------------------------->
@@ -189,6 +197,96 @@
                         <div class="kh-house-cards-wrapper">
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 col-lg-4 kh-responsive-card">
+                                    <article>
+                                        <div class="kh-house-card">
+                                            <div class="kh-img-wrapper">
+                                                <img width="600" height="900"
+                                                    src="./resources/images/homepage/properties/keeth-house-I.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </div>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="kh-house-info">
+                                                <div class="kh-card-text">
+                                                    <h3 class="kh-card-title">Keeth House - I</h3>
+                                                    <p class="kh-card-description">Our very first creation will take you
+                                                        back
+                                                        to the traditional houses of Tamil Nadu in the 90s. The
+                                                        two-level
+                                                        cottage with a sprawling porch or ‘thinnai’ at the entrance, is
+                                                        ideal for a small group of friends or a family of four.</p>
+                                                </div>
+                                                <div class="kh-cta-wrapper">
+                                                    <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                        target="_blank" class="kh-card-cta">Book Now</a>
+                                                    <div class="phase-I-Cta kh-card-cta"
+                                                        onclick="openGallery(1, '.kh-phase-1-gallery')">View
+                                                        Gallery</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 kh-responsive-card">
+                                    <article>
+                                        <div class="kh-house-card">
+                                            <div class="kh-img-wrapper">
+                                                <img width="600" height="900"
+                                                    src="./resources/images/homepage/properties/keeth-house-II.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </div>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="kh-house-info">
+                                                <div class="kh-card-text">
+                                                    <h3 class="kh-card-title">Keeth House - II</h3>
+                                                    <p class="kh-card-description">The two-level, octagon-shaped cottage
+                                                        is
+                                                        a multifunctional house designed to meet all your needs. Whether
+                                                        you're seeking a long workcation or just a weekend getaway with
+                                                        friends, Keeth House ll is the perfect destination.
+                                                    </p>
+                                                </div>
+                                                <div class="kh-cta-wrapper">
+                                                    <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                        target="_blank" class="kh-card-cta">Book Now</a>
+                                                    <div class="phase-I-Cta kh-card-cta"
+                                                        onclick="openGallery(2, '.kh-phase-1-gallery')">View
+                                                        Gallery</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4 kh-responsive-card">
+                                    <article>
+                                        <div class="kh-house-card">
+                                            <div class="kh-img-wrapper">
+                                                <img width="600" height="900"
+                                                    src="./resources/images/homepage/properties/keeth-house-III.jpg"
+                                                    alt="keeth-house-I" class="kh-house-img">
+                                            </div>
+                                            <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                target="_blank" class="kh-house-info">
+                                                <div class="kh-card-text">
+                                                    <h3 class="kh-card-title">Keeth House - III</h3>
+                                                    <p class="kh-card-description">The house is slightly tucked away to
+                                                        give
+                                                        you an off-the-grid experience. With picturesque views during
+                                                        the
+                                                        day and the soft warm glow of lights at night, it’s an ideal
+                                                        destination for an intimate romantic getaway.</p>
+                                                </div>
+                                                <div class="kh-cta-wrapper">
+                                                    <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
+                                                        target="_blank" class="kh-card-cta">Book Now</a>
+                                                    <div class="phase-I-Cta kh-card-cta"
+                                                        onclick="openGallery(3, '.kh-phase-1-gallery')">View
+                                                        Gallery</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- <div class="col-sm-6 col-md-6 col-lg-4 kh-responsive-card">
                                     <article>
                                         <div class="kh-house-card">
                                             <a href="https://bookings.keethhouse.com/?chainId=7859&propertyId=7843"
@@ -270,7 +368,7 @@
                                             </div>
                                         </div>
                                     </article>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
