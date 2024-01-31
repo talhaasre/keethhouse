@@ -64,10 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("kh-year").innerHTML = new Date().getFullYear();
 
-  // setTimeout(() => {
-  //   document.getElementById("kh-banner-content").classList.add("active");
-  // }, 10000);
-
   window.scroll(0, 0);
 });
 
