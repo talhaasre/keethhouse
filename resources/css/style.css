@@ -14,13 +14,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5em 0 0;
+  padding: 2.5em 1.5em 0;
   z-index: 10;
 }
 
 .kh-header_wrapper .kh-logo {
   width: 100%;
-  max-width: 25em;
+  max-width: 20em;
   margin: 0 auto;
 }
 
@@ -114,10 +114,12 @@
   /* visibility: hidden; */
   width: 100%;
   height: 100%;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 2.5em 2.5em 0;
   transition: all 1s;
 }
 .kh-sec1 .kh-text-container .kh-img_wrapper {
@@ -134,7 +136,7 @@
 .kh-sec1 .kh-text-container .kh-img_wrapper .kh-speaker {
   width: 100%;
   height: 100%;
-  max-width: 5em;
+  max-width: 3em;
 }
 
 .kh-sec1 .kh-text-container.active {
@@ -152,7 +154,7 @@
 }
 
 .kh-sec1 .kh-text-container .kh-banner-subtitle {
-  font-size: 2.375em;
+  font-size: 1.375em;
   color: var(--F1B04C);
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -258,18 +260,20 @@
   overflow: hidden;
   transition: all 0.3s;
 }
+
 .kh-sec3
   .kh-sec3-content
   .kh-house-cards-wrapper
   .kh-house-card
   .kh-house-info {
-  height: 25%;
+  height: 12em;
   position: absolute;
   bottom: 0;
   left: 0;
   overflow: hidden;
   transition: all 0.5s;
 }
+
 .kh-sec3
   .kh-sec3-content
   .kh-house-cards-wrapper
@@ -279,6 +283,7 @@
   background: rgba(0, 0, 0, 0.5);
   max-height: fit-content;
 }
+
 .kh-sec3
   .kh-sec3-content
   .kh-house-cards-wrapper
@@ -374,7 +379,7 @@
   .kh-card-text
   .kh-card-description {
   visibility: hidden;
-  font-size: 1.125em;
+  font-size: 1.25em;
   letter-spacing: 0.24px;
   line-height: 1.8em;
   margin: 0;
@@ -537,7 +542,7 @@
   position: relative;
   height: 100%;
   box-shadow: var(--cardShadow);
-  margin: 0;
+  margin: 0 0.75em;
   padding: 0;
   text-align: left;
   border-radius: 1.5em;
@@ -545,9 +550,52 @@
   transition: all 0.3s;
 }
 
-.kh-sec4 .kh-sec4-content .kh-house-cards-wrapper .kh-house-card:hover {
-  box-shadow: var(--cardHoverShadow);
-  transform: scale(1.02);
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card
+  .kh-house-info {
+  height: 11.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card:hover
+  .kh-house-info {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  max-height: fit-content;
+}
+
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card:hover
+  .kh-card-text
+  .kh-card-description {
+  visibility: visible;
+}
+
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card:hover
+  .kh-card-text {
+  justify-content: center;
+}
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card:hover
+  .kh-cta-wrapper
+  .kh-card-cta {
+  opacity: 1;
 }
 
 .kh-sec4
@@ -557,7 +605,7 @@
   .kh-img-wrapper {
   width: 100%;
   max-width: 100%;
-  max-height: fit-content;
+  max-height: 100%;
   overflow: hidden;
   text-decoration: none;
 }
@@ -570,9 +618,13 @@
   .kh-house-img {
   width: 100%;
   max-width: 100%;
-  max-height: 15em;
   object-position: center;
   transition: 0.3s;
+}
+
+.kh-sec4 .kh-sec4-content .kh-house-cards-wrapper .kh-house-card:hover {
+  box-shadow: var(--cardHoverShadow);
+  transform: scale(1.02);
 }
 
 .kh-sec4
@@ -586,9 +638,12 @@
 
 .kh-sec4 .kh-sec4-content .kh-house-cards-wrapper .kh-house-card .kh-card-text {
   padding: 2em 1.5em 4em;
+  height: 100%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
-  color: var(--black);
+  color: var(--white);
 }
 
 .kh-sec4
@@ -611,6 +666,7 @@
   .kh-house-card
   .kh-card-text
   .kh-card-description {
+  visibility: hidden;
   font-size: 1.125em;
   letter-spacing: 0.24px;
   line-height: 1.8em;
@@ -623,10 +679,9 @@
   .kh-house-cards-wrapper
   .kh-house-card
   .kh-cta-wrapper {
-  width: 100%;
-  max-width: 100%;
   position: absolute;
   bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 1.5em 2em;
@@ -638,15 +693,29 @@
   .kh-house-card
   .kh-cta-wrapper
   .kh-card-cta {
-  color: var(--F1B04C);
-  font-size: 1.25em;
+  background: var(--white);
+  color: var(--black);
+  font-size: 1.125em;
   letter-spacing: 0.24px;
   line-height: 1.8em;
   font-weight: 700;
   margin: 0;
-  padding: 0;
+  padding: 0.5em 1em;
+  border-radius: 5em;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.3s;
+  opacity: 0.75;
+}
+
+.kh-sec4
+  .kh-sec4-content
+  .kh-house-cards-wrapper
+  .kh-house-card
+  .kh-cta-wrapper
+  .kh-card-cta:hover {
+  background: var(--F1B04C);
+  color: var(--white);
 }
 
 /* PHASE 02 GALLERY */
@@ -814,6 +883,19 @@
   margin: 0 auto;
 }
 
+.kh-scroll-top {
+  background: var(--white);
+  border-radius: 50%;
+  display: none;
+  width: 100%;
+  max-width: 3em;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 @media (max-width: 1200px) {
   .kh-sec2 .kh-img-wrapper .kh-banner-img {
     max-width: 25em;
@@ -821,6 +903,15 @@
 
   .kh-sec4 .kh-sec4-content .kh-house-cards-wrapper .kh-responsive-card {
     margin: 0 0 5em;
+  }
+
+  .kh-sec4
+    .kh-sec4-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-card-text
+    .kh-card-description {
+    font-size: 1.25em;
   }
 }
 
@@ -838,7 +929,7 @@
   }
 
   .kh-sec1 .kh-text-container .kh-banner-subtitle {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
 
   /* SECTION 02 */
@@ -906,24 +997,12 @@
     .kh-house-card
     .kh-card-text
     .kh-card-description,
-  .kh-sec3
-    .kh-sec3-content
-    .kh-house-cards-wrapper
-    .kh-house-card
-    .kh-cta-wrapper
-    .kh-card-cta,
   .kh-sec4
     .kh-sec4-content
     .kh-house-cards-wrapper
     .kh-house-card
     .kh-card-text
-    .kh-card-description,
-  .kh-sec4
-    .kh-sec4-content
-    .kh-house-cards-wrapper
-    .kh-house-card
-    .kh-cta-wrapper
-    .kh-card-cta {
+    .kh-card-description {
     font-size: 1.4em;
   }
 
@@ -962,6 +1041,19 @@
     font-size: 2.4em;
   }
 
+  .kh-sec3
+    .kh-sec3-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-house-info,
+  .kh-sec4
+    .kh-sec4-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-house-info {
+    height: 13em;
+  }
+
   /* FOOTER */
   /* FOOTER */
   /* FOOTER */
@@ -972,6 +1064,12 @@
 
   .kh-footer .kh-footer-content .kh-contact-box {
     padding: 0 0 5em;
+  }
+
+  .kh-scroll-top {
+    max-width: 3em;
+    right: 0.5em;
+    opacity: 1;
   }
 }
 
@@ -1036,15 +1134,6 @@
     .kh-card-description {
     font-size: 1.4em;
     text-align: justify;
-  }
-
-  .kh-sec3
-    .kh-sec3-content
-    .kh-house-cards-wrapper
-    .kh-house-card
-    .kh-cta-wrapper
-    .kh-card-cta {
-    font-size: 1.4em;
   }
 
   .kh-sec4
@@ -1269,8 +1358,40 @@
   }
 }
 
+@media (max-width: 578px) {
+  .kh-sec3
+    .kh-sec3-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-cta-wrapper
+    .kh-card-cta,
+  .kh-sec4
+    .kh-sec4-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-cta-wrapper
+    .kh-card-cta {
+    font-size: 1.4em;
+  }
+}
+
 @media (max-width: 360px) {
   .kh-sec1 .kh-header_wrapper .kh-navbar-list .kh-navbar-item {
+    font-size: 1.2em;
+  }
+
+  .kh-sec3
+    .kh-sec3-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-cta-wrapper
+    .kh-card-cta,
+  .kh-sec4
+    .kh-sec4-content
+    .kh-house-cards-wrapper
+    .kh-house-card
+    .kh-cta-wrapper
+    .kh-card-cta {
     font-size: 1.2em;
   }
 }

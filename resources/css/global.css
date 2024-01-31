@@ -391,13 +391,14 @@ section {
 @media (max-width: 1719px) {
   .kh-container {
     font-size: 14.5px;
-    max-width: 1304.8px;
+    max-width: 1504.8px;
   }
 }
 
 @media (max-width: 1536px) {
   .kh-container {
     font-size: 13px;
+    max-width: 1354.8px;
   }
 }
 

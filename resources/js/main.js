@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   document.getElementById("kh-banner-content").classList.add("active");
   // }, 10000);
 
-  // window.scroll(0, 0);
+  window.scroll(0, 0);
 });
 
 function openGallery(boxNumber, galleryNo) {
@@ -112,3 +112,28 @@ function toggleMute() {
     muteContainer.classList.remove("hide");
   }
 }
+
+const button = document.querySelector(".kh-scroll-top");
+
+const displayButton = () => {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 800) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  });
+};
+
+const scrollToTop = () => {
+  button.addEventListener("click", () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+};
+
+displayButton();
+scrollToTop();
