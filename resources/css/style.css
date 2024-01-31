@@ -656,7 +656,7 @@
   height: 0;
   transition: all 0.15s ease-out;
   overflow: hidden;
-  background: var(--F1B04C);
+  background: var(--F0F0F0);
 }
 
 .kh-phase-2-gallery .kh-close-icon {
@@ -683,7 +683,7 @@
 }
 
 .kh-phase-2-gallery .kh-text-container .kh-section-title {
-  color: var(--white);
+  color: var(--F1B04C);
   text-align: center;
   margin: 0 0 1em;
 }
